@@ -1,7 +1,6 @@
 import numpy as np
 
 from sklearn.metrics.pairwise import cosine_similarity
-from src.encode import encode_corpus_query
 
 def naive_pipeline(corpus_embedding, queries_embedding, dbids=None):  
     cosim = cosine_similarity(queries_embedding, corpus_embedding)

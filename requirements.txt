@@ -4,3 +4,4 @@ ipykernel==6.29.5
 chromadb==0.5.20
 pyarrow
 pandas
+h5py

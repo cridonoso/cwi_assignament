@@ -14,3 +14,11 @@ def encode_corpus_query(corpus, queries):
     queries_embeddings = model.encode(queries_sequences)
 
     return corpus_embeddings, queries_embeddings
+
+def encode_from_documents(documents, queries):
+    model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+    embeddings = model.encode(documents)
+    
+    queries_sequences = [x for x in queries['query']]
+    queries_embeddings = model.encode(queries_sequences)
+    return embeddings, queries_embeddings
